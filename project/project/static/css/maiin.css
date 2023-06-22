@@ -1,0 +1,23 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-color:#4b4a4a10;
+}
+a{ 
+    color: #6d777c;
+
+}
+a:hover{
+    color: #da6f81;
+}
+h2{
+    font-family: var(--font-body);
+        color: #6d777c;
+        line-height: 1.3;
+        font-size: 38px;
+        letter-spacing: -1px;
+        font-weight: 700;
+}

@@ -1,0 +1,66 @@
+<!-- combined_template.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Combined Template</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <script src="{% static 'js/script.js' %}"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent text-dark border-bottom pe-4 ps-5 position-fixed top-0 e-0 s-0 w-100 opacity-100 color_white ">
+      <div class="container-fluid">
+        <a class="navbar-brand fs-1 fw-bold" href="#">Fingerprint <span class="fs-1 "></span>. </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+    <section id="scan" class="mt-5">
+      <div class="scanner h-75 w-100 text-center">
+        <div class="scanner-top">
+          <h2 class="pt-5 pb-5">Touch The Fingerprint Sensor</h2>
+          <div class="scanner-status"></div>
+        </div>
+        <div class="scanner-bottom">
+          <button class="scanner-scan border-0"><img src="{% static 'images/images (1).jpg' %}" alt=""></button>
+          <div class="scanner-output"></div>
+        </div>
+        <div>
+          <br>
+          <h5 id="pb-2">Or Draw The Picture Of Finger</h5>
+          <form method="POST" enctype="multipart/form-data" id="prediction-form">
+            {% csrf_token %}
+            <label for="image">Upload an image:</label>
+            <input type="file" name="image" accept="image/*">         <br/><br/>
+            <a href="{% url 'viewdata'%}"> <button type="button" class="btn btn-outline-dark ps-5 pe-5">submit</button></a>
+            
+          </form>
+        </div>
+      </div>
+      <div><h2 class="text-center">Stay Safe From Phishing</h2></div>
+    </section>
+    <section>
+     
+      <div id="prediction-result"></div>
+    </section>
+    <script>
+      // Handle form submission using AJAX
+      const form = document.getElementById('prediction-form');
+      const resultDiv = document.getElementById('prediction-result');
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const formData = new FormData(form);
+        const response = await fetch('{% url "predict" %}', {
+          method: 'POST',
+          body: formData
+        });
+        const prediction = await response.json();
+        resultDiv.textContent = `Prediction: ${prediction.prediction}`;
+      });
+    </script>
+  </body>
+</html>

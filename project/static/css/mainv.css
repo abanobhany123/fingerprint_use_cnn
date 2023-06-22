@@ -1,0 +1,29 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+a{ 
+    color: #da6f81;
+
+}
+
+h2{
+ color: whitesmoke;
+ font-family: Poppins, sans-serif;
+}
+p{
+    color: whitesmoke;
+ font-family: Poppins, sans-serif;
+
+}
+i:hover{
+    color: #8a8484;
+}
+i{
+    color: blanchedalmond;
+}

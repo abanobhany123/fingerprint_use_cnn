@@ -1,0 +1,315 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+/* home*/
+.navbar{
+    z-index: 9999999;
+}
+
+i:hover{
+    color: #cccccc;
+}
+
+.btn2{
+    color: #fff;
+}
+.btn2:hover{
+   
+    background-color: #fff;
+    color: #000;
+}
+.carousel-caption{
+    
+    padding-bottom: 150px;
+    animation: scaling;
+    animation: alternate 7s infinite 
+}
+.carousel-caption H5{
+    color: #ffff;
+    font-size: 100px;
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    opacity: 1;
+}
+
+ .carousel-caption P{
+     font-family: Poppins, sans-serif;
+      font-weight: 400;
+     font-size: 20px;
+     color: #ffff;}
+    @keyframes scaling{
+         0%{opacity: 1; transform: scale(1)};
+         20%{opacity: 1;  transform: scale(1)};
+         80%{opacity: 1; transform: scale(1)};
+         100%{opacity: 0; transform: scale(0.9)}; }
+    .layer{
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.7) ;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right:0% ;}
+
+
+/*about */
+.about h6{
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    margin-top: 0px;
+}
+.about p{
+    font-size: 24px;
+    margin: 20px 0px;
+    font-weight: 300;
+    color: rgb(120, 120, 120);
+}
+.about button{
+    color: #000;
+}
+.about button:hover{
+    color: #ffff;
+    background-color: #000;
+}
+
+span.span1::after{
+    content: "|";
+    font-size: 24px;
+    margin: 20px 0px;
+    font-weight: 700;   
+    animation: typing;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+@keyframes typing{
+    0%{content:"a|"}
+    1%{content: "ap|";}
+    2%{content: "app|";}
+    3%{content: "apps|";}
+    4%{content: "app|";}
+    5%{content: "ap|";}
+    6%{content: "a|";}
+    7%{content: "|";}
+    8%{content: "|";}
+    9%{content: "|";}
+    10%{content: "w|";}
+    11%{content: "we|";}
+    12%{content: "wep|";}
+    13%{content: "weps|";}
+    14%{content: "wepsi|";}
+    15%{content: "wepsit|";}
+    16%{content: "wepsite|";}
+    17%{content: "wepsites|";}
+    18%{content: "wepsite|";}
+    19%{content: "wepsit|";}
+    20%{content: "wepsi|";}
+     21%{content: "weps|";} 
+     22%{content: "wep|";}
+    23%{content: "we|";}
+    24%{content: "w|";}
+    25%{content: "|";}
+    26%{content: "|";}
+    27%{content: "|";}
+    28%{content: "s|";}
+    23%{content: "sof|";}
+    29%{content: "soft|";}
+    30%{content: "softw|";}
+    31%{content: "softwa|";}
+    32%{content: "softwar|";}
+    33%{content: "software|";}
+    34%{content: "softwares|";}
+    35%{content: "software|";}
+    36%{content: "softwar|";}
+    37%{content: "softwa|";}
+    38%{content: "softwa|";}
+    39%{content: "softw|";}
+    40%{content: "soft|";}
+    41% {content:"sof|"}
+    43%{content: "so|";}
+    44%{content: "s|";}
+    45%{content: "|";}
+    46%{content: "|";}
+    47%{content: "|";}
+    100%{content: "";}
+    }
+
+
+/*team*/
+.team-caption h2{
+font-size: 80px;
+font-weight: 800;
+ color: #f1f1f1;
+ position: relative;
+ 
+}
+.team-caption h3{
+    position: absolute;
+    left: 50%;
+   
+    top:40%;
+    font-size: 38px;
+    letter-spacing: -1px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    color: #1f1f1f;
+    line-height: 1.3;
+    margin-bottom: 10px
+
+
+}
+.team-caption p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+    color: #787878;
+}
+.team-img{
+    overflow: hidden;
+    visibility: visible;
+}
+
+.layer{
+    position: absolute;
+    
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height:0 ;
+    background-color: rgba(0, 195, 218, 0.9);
+    color:#ffff;
+    transition: all .3s ease;
+    opacity: 0;
+    
+}
+    .team-img:hover .layer{
+        height:100%;
+        top: 0;
+        opacity: 1;
+        
+        
+    }
+    .team-info{
+        font-size: 13px;
+    }
+    .team-info h4{
+        font-size: 15px;
+    }
+
+
+    /*services*/
+    #Services{
+        background-color: grey;
+        height: 90%;
+    }
+    .section h2{
+        font-size: 80px;
+        font-weight: 800;
+         color: #6b6b6b;
+         position: relative;
+         
+        }
+        .section h3{
+            position: absolute;
+            left: 2%;
+           
+            top:32%;
+            font-size: 38px;
+            letter-spacing: -1px;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+            color: #ffff;
+            line-height: 1.3;
+            margin-bottom: 10px
+            }
+
+
+                  /*ctontac*/
+                .contact-caption h2{
+                font-size: 80px;
+                font-weight: 800;
+                 color: #f1f1f1;
+                position: relative;
+                }
+               .contact-caption h3{
+                position: absolute;
+                left: 7%;
+                top:35%;
+                font-size: 38px;
+                letter-spacing: -1px;
+                font-weight: 700;
+                font-family: 'Poppins', sans-serif;
+                color: #000;
+                line-height: 1.3;
+                margin-bottom: 10px
+                 }
+                .contact-caption p{
+                font-weight: 400;
+                font-size: 18px;
+                font-family: 'Source Sans Pro', sans-serif;
+                color: #787878;
+                }
+                button{
+                transition: all 0.5s;
+                }
+                button:hover 
+                { 
+                transform: scale(1.01); 
+                }
+
+
+                /*works*/
+                .works{
+                background-color: #f7f7f7;
+                }
+                .works-caption h2{
+                    font-size: 80px;
+                    font-weight: 800;
+                     color: #f1f1f1;
+                     position: relative;
+                     
+                    }
+                    .works-caption h3{
+                        position: absolute;
+                        left: 50%;
+                       
+                        top:40%;
+                        font-size: 38px;
+                        letter-spacing: -1px;
+                        font-weight: 700;
+                        font-family: 'Poppins', sans-serif;
+                        color: #1f1f1f;
+                        line-height: 1.3;
+                        margin-bottom: 10px
+                    }
+                    .works-caption p{
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                        line-height: 1.3;
+                        color: #787878;
+                    }
+                   span{
+                    font-size: 18px;
+                    font-weight: 400;
+                    vertical-align: top;
+                }
+                   
+                   .card h3{
+                       font-size: 55px;
+
+                   }
+                   .card-caption p{
+
+                    color: #787878;
+                   }
+                   .h3-color {
+                       color: #00c3da;
+                   }
+                   
+                    /*pricing*/
+                   .pricing{
+                    background-color: #f7f7f7;
+                                    }
+                                 
